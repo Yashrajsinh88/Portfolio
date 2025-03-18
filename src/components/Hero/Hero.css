@@ -71,6 +71,11 @@
 }
 
 @media (max-width: 768px) {
+    .hero{
+        gap: 10px;
+        margin: 50px;
+    }
+
     .hero img {
         width: 200px;
     }
@@ -107,3 +112,20 @@
         font-size: 14px
     }
 } 
+
+@media (max-width:425px) {
+    .hero{
+        gap: 2px;
+        margin: 10px;
+    }
+
+    .hero-connect {
+        padding: 15px;
+        font-size: 13px
+    }
+
+    .hero-resume {
+        padding: 14px 26px;
+        font-size: 13px
+    }
+}

@@ -143,10 +143,6 @@
 
 /* 📲 Extra Small Screens (Mobile Phones) */
 @media (max-width: 576px) {
-   .skills-section {
-    align-items: center;
-   }
-
   .title{
     padding: 0;
     font-size: 35px;
@@ -167,5 +163,16 @@
 
   .skill-card .icon {
     font-size: 45px;
+  }
+}
+
+@media (max-width: 425px) {
+  .skills-section{
+    margin: 70px 0%;
+  }
+
+  .skill-card{
+  width: 34vw;
+  height: 32vw;
   }
 }

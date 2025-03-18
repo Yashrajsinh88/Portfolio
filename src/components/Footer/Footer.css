@@ -19,6 +19,7 @@
 @media (max-width: 768px) {
     .footer {
         margin:50px 6%;
+        text-align: center;
     }
 
     .footer-bottom {

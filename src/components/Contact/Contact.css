@@ -164,4 +164,20 @@
     .contact-title{
         margin: auto;
     }
+
+    .contact-social-icons{
+        margin: 5px;
+    }
+
+    .contact-details{
+        gap: 15px;
+    }
+
+    .contact-section{
+        gap: 0px;
+    }
+}
+
+@media (max-width: 425px) {
+
 }
