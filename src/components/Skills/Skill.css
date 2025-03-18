@@ -1,0 +1,171 @@
+.skills-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  margin: 70px 10%;
+
+}
+
+.skill-title{
+  position: relative;
+}
+
+.title {
+  padding: 0px 30px;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.skill-title img{
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  z-index: -1;
+}
+
+.subtitle {
+  font-size: 15px;
+  color: #777;
+  margin-bottom: 30px;
+}
+
+/* 5 icons per row */
+.skills-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;  /* Reduced gap to fix spacing issue */
+  justify-content: center;
+  align-items: center;
+}
+
+.skill-card {
+  width: 200px;
+  height: 160px;
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 12px;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+  transition: transform 0.2s ease-in-out, background 0.3s ease-in-out;
+  margin: 5px;
+  position: relative; /* Required for absolute positioning */
+  overflow: hidden;
+}
+
+/* Icon with original colors */
+.skill-card .icon {
+  font-size: 60px;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Language name (hidden initially) */
+.skill-card .skill-name {
+  font-size: 18px;
+  font-weight: bold;
+  color: #333;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+/* Hover Effect: Hide Icon, Show Name */
+.skill-card:hover .icon {
+  opacity: 0;
+}
+
+.skill-card:hover .skill-name {
+  opacity: 1;
+}
+
+/* Hover Effect: Slight color change */
+.skill-card:hover {
+  background: linear-gradient(270deg,#DF8908 50%,#B415FF 100%);
+  color: white;
+  transform: scale(1.05);
+}
+
+@media (max-width: 1280px) {
+  .skills-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* 💻 Medium Screens (Laptops & Tablets) */
+@media (max-width: 1024px) {
+  .skills-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .skill-card {
+    width: 180px;
+    height: 140px;
+  }
+
+  .skill-card .icon {
+    font-size: 55px;
+  }
+}
+
+/* 📱 Small Screens (Tablets & Large Phones) */
+@media (max-width: 768px) {
+
+  .skills-section {
+    gap: 50px;
+    margin: 20px 6%
+}
+
+.title{
+    padding: 0;
+    font-size: 40px;
+}
+
+.skill-title img{
+    width: 130px;
+    right: -20px;
+}
+  .skills-grid {
+    margin: auto;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .skill-card {
+    width: 180px;
+    height: 140px;
+  }
+
+  .skill-card .icon {
+    font-size: 50px;
+  }
+}
+
+/* 📲 Extra Small Screens (Mobile Phones) */
+@media (max-width: 576px) {
+   .skills-section {
+    align-items: center;
+   }
+
+  .title{
+    padding: 0;
+    font-size: 35px;
+}
+
+.skill-title img{
+  width: 115px;
+  right: -15px;
+}
+  .skills-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .skill-card {
+    width: 30vw;
+    height: 30vw;
+  }
+
+  .skill-card .icon {
+    font-size: 45px;
+  }
+}
