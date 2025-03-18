@@ -1,7 +1,10 @@
 import crypto from "../src/assets/crypto.png"
-import adminPannel from "../src/assets/adminPannel.png"
+import reactPannel from "../src/assets/reactPannel.png"
 import shoesWeb from "../src/assets/shoes.png"
 import airline from "../src/assets/airline.png"
+import nodePannel from "../src/assets/nodePannel.png"
+import food from "../src/assets/food.png"
+import cloths from "../src/assets/cloths.png"
 
 
 
@@ -16,7 +19,7 @@ const mywork = [
     {
         w_no:2,
         w_name:"Web design",
-        w_img:adminPannel,
+        w_img:reactPannel,
     },
 
     {
@@ -29,6 +32,24 @@ const mywork = [
         w_no:4,
         w_name:"Web design",
         w_img:airline,
+    },
+    
+    {
+        w_no:5,
+        w_name:"Web design",
+        w_img:nodePannel,
+    },
+
+    {
+        w_no:6,
+        w_name:"Web design",
+        w_img:food,
+    },
+    
+    {
+        w_no:7,
+        w_name:"Web design",
+        w_img:cloths,
     },
 ]
 
