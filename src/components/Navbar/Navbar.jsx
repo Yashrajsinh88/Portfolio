@@ -5,6 +5,7 @@ import AnchorLink from "react-anchor-link-smooth-scroll";
 import { FaBarsStaggered } from "react-icons/fa6";
 import { IoClose } from "react-icons/io5";
 import logo from "../../assets/logo.png";
+import { CiHome } from "react-icons/ci";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
