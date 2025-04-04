@@ -5,6 +5,11 @@ import myworkdata from "../../../public/myWorkData.js"
 import { FaArrowRight } from 'react-icons/fa'
 
 const MyWork = () => {
+
+   function hadleProjectLink(work) {
+    window.open(work)
+   }
+
   return (
     <>
     <div id='work' className='mywork'>
@@ -14,12 +19,8 @@ const MyWork = () => {
         </div>
          <div className="mywork-container">
               {myworkdata.map((work , index)=> {
-                return <img key={index} src={work.w_img} alt="" />
+                return <img key={index} src={work.w_img} alt="" onClick={()=> hadleProjectLink(work.w_link) } />
               })}
-         </div>
-         <div className="mywork-showmore">
-            <p>Show More</p>
-             <FaArrowRight/> 
          </div>
     </div>
     </>

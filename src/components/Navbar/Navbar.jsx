@@ -1,4 +1,4 @@
-import React, { useRef, useState } from "react";
+import React, { useRef, useState, useEffect } from "react";
 import "./Navbar.css";
 import underLine from "../../assets/theme.svg";
 import AnchorLink from "react-anchor-link-smooth-scroll";
@@ -8,6 +8,7 @@ import logo from "../../assets/logo.png";
 
 const Navbar = () => {
   const [menu, setMenu] = useState("home");
+  const [scrolling, setScrolling] = useState(false);
   const menuRef = useRef();
 
   const handleOpenMenu = () => {
@@ -17,9 +18,24 @@ const Navbar = () => {
   const handleCloseMenu = () => {
     menuRef.current.style.right = "-300px";
   };
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setScrolling(true);
+      } else {
+        setScrolling(false);
+      }
+    };
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <>
-      <div className="navbar">
+      <div className={`navbar ${scrolling ? "scrolled" : ""}`}>
         <img src={logo} alt="" className="logo" />
         <FaBarsStaggered
           className="nav-mob-open"
@@ -49,7 +65,7 @@ const Navbar = () => {
           <li>
             <AnchorLink className="anchor-link" offset={50} href="#skills">
               <p onClick={() => setMenu("skills")}>Skills</p>
-            </AnchorLink>
+            </AnchorLink>   
             {menu === "skills" ? <img src={underLine} alt="" width={35} /> : ""}
           </li>
 
